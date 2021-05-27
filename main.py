@@ -20,7 +20,7 @@ if __name__=='__main__':
     if i == 1:
       print("Your hash :",hash)
     elif i == 2:
-      j = ("Paste the hash")
+      j = input("Paste the hash")
       if j == hash:
         print("File not corrupted")
       else:
