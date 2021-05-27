@@ -1,6 +1,6 @@
 try:
   from py_essentials import hashing as hs
-expect:
+except:
   import os
   try:
     print("installing dependencies")
