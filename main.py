@@ -14,13 +14,14 @@ if __name__=='__main__':
       hasher = RSA()
       hash = hasher.PasswordHasher(File)
       print("Your hash :",hash)
-    else i == 2:
+    elif i == 2:
       j = ("Paste the hash")
       hash = hasher.PasswordHasher(File)
       if j == hash:
         print("File not corrupted")
       else:
         print("File Corrupted")
-  expect:
+    else:
+      print("Invalid Choice")
+  except:
     print("invalid Choice")
-  
