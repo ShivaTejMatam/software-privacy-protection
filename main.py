@@ -1,11 +1,21 @@
-import hashlib
+try:
+  from py_essentials import hashing as hs
+expect:
+  import os
+  try:
+    print("installing dependencies")
+    os.system("pip install py_essentials")
+  except:
+    print("Connnect to internet and run")
+   
+  
 
 if __name__=='__main__':
+  from py_essentials import hashing as hs
   print("Select Your File")
   File_path = input("Enter path of file")
-  File = open(File_path , "r")
-  try:
-    hash = hashlib.sha256(file.encode()).hexdigest()
+  try:  
+    hash = hs.fileChecksum(File_path, "sha256")
     i = int(input("1 . Generate Hash \n2 . Check Hash"))
     if i == 1:
       print("Your hash :",hash)
